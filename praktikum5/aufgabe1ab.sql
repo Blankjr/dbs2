@@ -1,8 +1,4 @@
-set serveroutput on;
-set echo on;
-
 DROP TABLE Staedte;
-
 CREATE TABLE Staedte(
 stadtname VARCHAR(30) PRIMARY KEY,
 laengengrad NUMBER,

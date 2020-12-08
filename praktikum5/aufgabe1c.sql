@@ -1,7 +1,16 @@
-set serveroutput on;
-set echo on;
--- Aufgabe c OHNE PACKAGE
-create or replace function distance(lat1 float, lon1 float, lat2 float, lon2 float)RETURN float
+--Create a new Package
+
+CREATE PACKAGE ABSTANDSTAEDTE IS
+
+  -- Add a procedure
+  PROCEDURE PROCEDURE1 (
+    PARAM1 IN NUMBER);
+
+  -- Add a function
+  FUNCTION FUNCTION1 (
+    PARAM1 IN NUMBER) RETURN NUMBER;
+
+  FUNCTION DISTANCE(lat1 float, lon1 float, lat2 float, lon2 float)RETURN float
 		AS 
 			radlat1 float;
 			radlat2 float ;
@@ -25,6 +34,7 @@ create or replace function distance(lat1 float, lon1 float, lat2 float, lon2 flo
 			END IF;
             RETURN dist;
 		END;
- /       
-    EXECUTE  dbms_output.put_line(distance(10213412, 12340, 412421, 12313));
-	orac
+
+
+END PACKAGE1;
+/
