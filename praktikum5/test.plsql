@@ -1,4 +1,5 @@
-
+-- nicht mehr relevant siehe datei aufgabe 1c
+/*
 CREATE Or REPLACE TYPE distanceBetween IS RECORD
 (
     mCity    VARCHAR(30),
@@ -24,6 +25,6 @@ create or replace function distanceBetween(cityName varchar(20))return Varray(n)
 
 --create custom record in d
 -- create table with created records from d in e
-
+*/
 
 
