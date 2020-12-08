@@ -1,16 +1,64 @@
+CREATE OR REPLACE PACKAGE AF_CONTRACT AS  -- spec
+   -- PROCEDURE my_rpcedure (emp_id NUMBER);
+   TYPE DTO_GRID IS RECORD
+   (
+     ROWKEY    NVARCHAR2(200),
+     COLUMNKEY NVARCHAR2(200),
+     CELLVALUE NVARCHAR2(200),
+     OLDVALUE  NVARCHAR2(200),
+     TAG       NVARCHAR2(200)
+   );
+END AF_CONTRACT;
+/
+
+
 --Create a new Package
 
-CREATE PACKAGE ABSTANDSTAEDTE IS
+CREATE OR REPLACE PACKAGE DISTANCES AS
 
-  -- Add a procedure
-  PROCEDURE PROCEDURE1 (
-    PARAM1 IN NUMBER);
+	TYPE distancesRow IS RECORD
+   (
+		compareDistance01 FLOAT,
+		compareDistance02 FLOAT,
+		compareDistance03 FLOAT,
+		compareDistance04 FLOAT,
+		compareDistance05 FLOAT,
+		compareDistance06 FLOAT,
+		compareDistance07 FLOAT,
+		compareDistance08 FLOAT,
+		compareDistance09 FLOAT,
+		compareDistance10 FLOAT,
+		compareDistance11 FLOAT,
+		compareDistance12 FLOAT,
+		compareDistance13 FLOAT,
+		compareDistance14 FLOAT
+   );
+  	-- Add a function
+  	FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float;
+		
+  	-- Add a procedure
+  	FUNCTION GETDISTANCERECORD (cityName IN VARCHAR) RETURN RECORD;
+END DISTANCES;
+/
+--Create a new Package Body
 
-  -- Add a function
-  FUNCTION FUNCTION1 (
-    PARAM1 IN NUMBER) RETURN NUMBER;
+CREATE OR REPLACE PACKAGE BODY DISTANCES IS
 
-  FUNCTION DISTANCE(lat1 float, lon1 float, lat2 float, lon2 float)RETURN float
+	
+
+   
+
+  -- Add procedure body
+  PROCEDURE GETDISTANCERECORD (cityName IN VARCHAR) IS
+	latitudeMain STAEDTE.LAENGENGRAD%"TYPE";
+	longitudeMain STAEDTE.BREITENGRAD%"TYPE";
+	BEGIN
+	  SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+	  SELECT BREITENGRAD INTO latitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+	END PROCEDURE1;
+
+  -- Add function body
+  FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float
 		AS 
 			radlat1 float;
 			radlat2 float ;
@@ -35,6 +83,5 @@ CREATE PACKAGE ABSTANDSTAEDTE IS
             RETURN dist;
 		END;
 
-
-END PACKAGE1;
+END DISTANCES;
 /
