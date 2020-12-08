@@ -16,46 +16,31 @@ END AF_CONTRACT;
 
 CREATE OR REPLACE PACKAGE DISTANCES AS
 
-	TYPE distancesRow IS RECORD
-   (
-		compareDistance01 FLOAT,
-		compareDistance02 FLOAT,
-		compareDistance03 FLOAT,
-		compareDistance04 FLOAT,
-		compareDistance05 FLOAT,
-		compareDistance06 FLOAT,
-		compareDistance07 FLOAT,
-		compareDistance08 FLOAT,
-		compareDistance09 FLOAT,
-		compareDistance10 FLOAT,
-		compareDistance11 FLOAT,
-		compareDistance12 FLOAT,
-		compareDistance13 FLOAT,
-		compareDistance14 FLOAT
-   );
+	TYPE distancesMaps 
+		IS TABLE OF FLOAT INDEX BY VARCHAR2(50);
+	
   	-- Add a function
   	FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float;
 		
   	-- Add a procedure
-  	FUNCTION GETDISTANCERECORD (cityName IN VARCHAR) RETURN RECORD;
+  	FUNCTION GETDISTANCERECORD (cityName IN VARCHAR) RETURN distancesMaps;
 END DISTANCES;
 /
 --Create a new Package Body
 
-CREATE OR REPLACE PACKAGE BODY DISTANCES IS
-
-	
-
-   
+CREATE OR REPLACE PACKAGE BODY DISTANCES AS
 
   -- Add procedure body
-  PROCEDURE GETDISTANCERECORD (cityName IN VARCHAR) IS
-	latitudeMain STAEDTE.LAENGENGRAD%"TYPE";
-	longitudeMain STAEDTE.BREITENGRAD%"TYPE";
+	FUNCTION GETDISTANCERECORD (cityName IN VARCHAR) RETURN distancesMaps
+		AS
+		latitudeMain STAEDTE.LAENGENGRAD%"TYPE";
+		longitudeMain STAEDTE.BREITENGRAD%"TYPE";
+		distanceMap distancesMaps;
 	BEGIN
-	  SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
-	  SELECT BREITENGRAD INTO latitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
-	END PROCEDURE1;
+	 -- SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+	 -- SELECT BREITENGRAD INTO latitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+	 	RETURN distanceMap;
+	END;
 
   -- Add function body
   FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float
