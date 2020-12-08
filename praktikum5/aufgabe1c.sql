@@ -18,12 +18,14 @@ CREATE OR REPLACE PACKAGE DISTANCES AS
 
 	TYPE distancesMaps 
 		IS TABLE OF FLOAT INDEX BY VARCHAR2(50);
+	cursor cursor_cities is SELECT * FROM staedte;
+	zeile STAEDTE%rowtype;
 	
   	-- Add a function
   	FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float;
 		
   	-- Add a procedure
-  	FUNCTION GETDISTANCERECORD (cityName IN VARCHAR) RETURN distancesMaps;
+  	FUNCTION GETDISTANCERECORD (cityName IN STAEDTE.STADTNAME%"TYPE") RETURN distancesMaps;
 END DISTANCES;
 /
 --Create a new Package Body
@@ -31,14 +33,28 @@ END DISTANCES;
 CREATE OR REPLACE PACKAGE BODY DISTANCES AS
 
   -- Add procedure body
-	FUNCTION GETDISTANCERECORD (cityName IN VARCHAR) RETURN distancesMaps
+	FUNCTION GETDISTANCERECORD (cityName IN STAEDTE.STADTNAME%"TYPE") RETURN distancesMaps
 		AS
 		latitudeMain STAEDTE.LAENGENGRAD%"TYPE";
 		longitudeMain STAEDTE.BREITENGRAD%"TYPE";
 		distanceMap distancesMaps;
+		
+    	
 	BEGIN
-	 -- SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
-	 -- SELECT BREITENGRAD INTO latitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+	  	SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+	  	SELECT BREITENGRAD INTO latitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+		--Open CURSOR
+		--IF (NOT cursor_cities%ISOPEN ) THEN
+       -- open cursor_cities;
+		--END IF;
+		-- OPENING/CLOSING THE CURSOR AUTOFAIL THE BODY EVEN WITHOUT DOING ANYTHING ELSE
+		--LOOP
+		--	FETCH cursor_cities INTO zeile;
+        	--distanceMap(zeile.stadtname) := CALCDISTANCE(latitudeMain ,longitudeMain, zeile.LAENGENGRAD, zeile.BREITENGRAD)
+        --	EXIT WHEN cursor_cities%notfound;
+		--END LOOP;
+		--close cursor_cities
+	  
 	 	RETURN distanceMap;
 	END;
 
