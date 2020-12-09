@@ -21,6 +21,7 @@ INSERT INTO Staedte VALUES('Oberhausen', 6, 27, 51, 28);
 INSERT INTO Staedte VALUES('Remscheid', 7, 12, 51, 11);
 INSERT INTO Staedte VALUES('Solingen', 7, 5, 51, 10);
 INSERT INTO Staedte VALUES('Wuppertal', 7, 13, 51, 16);
+COMMIT;
 --d
 -- 1)Prozedur die über für eine Stadt über alle anderen Städte iteriert und die abstandfunktion aufruft
 -- 2)aufrufen von 1 für alle staedte

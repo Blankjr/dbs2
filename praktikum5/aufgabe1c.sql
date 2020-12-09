@@ -17,8 +17,8 @@ END AF_CONTRACT;
 CREATE OR REPLACE PACKAGE DISTANCES AS
 
 	TYPE distancesMaps 
-		IS TABLE OF FLOAT INDEX BY VARCHAR2(50);
-	cursor cursor_cities is SELECT * FROM staedte;
+		IS TABLE OF FLOAT INDEX BY VARCHAR2(20);
+	
 	zeile STAEDTE%rowtype;
 	
   	-- Add a function
@@ -38,23 +38,49 @@ CREATE OR REPLACE PACKAGE BODY DISTANCES AS
 		latitudeMain STAEDTE.LAENGENGRAD%"TYPE";
 		longitudeMain STAEDTE.BREITENGRAD%"TYPE";
 		distanceMap distancesMaps;
-		
+		totalRows NUMBER(3);
+		rowCounter NUMBER(3) := 0;
+		rowName STAEDTE.STADTNAME%"TYPE";
+		--cursor cursor_cities IS 
+		--SELECT * 
+		--FROM staedte;
     	
 	BEGIN
 	  	SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
 	  	SELECT BREITENGRAD INTO latitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
+		--SELECT STADTNAME INTO rowName FROM STAEDTE WHERE rownum = 1;
+		/*
 		--Open CURSOR
-		--IF (NOT cursor_cities%ISOPEN ) THEN
-       -- open cursor_cities;
-		--END IF;
+		IF (NOT cursor_cities%ISOPEN ) THEN
+        	open cursor_cities;
+		END IF;
 		-- OPENING/CLOSING THE CURSOR AUTOFAIL THE BODY EVEN WITHOUT DOING ANYTHING ELSE
-		--LOOP
-		--	FETCH cursor_cities INTO zeile;
-        	--distanceMap(zeile.stadtname) := CALCDISTANCE(latitudeMain ,longitudeMain, zeile.LAENGENGRAD, zeile.BREITENGRAD)
-        --	EXIT WHEN cursor_cities%notfound;
-		--END LOOP;
-		--close cursor_cities
-	  
+		LOOP
+			FETCH cursor_cities INTO zeile;
+        		distanceMap(zeile.stadtname) := CALCDISTANCE(latitudeMain ,longitudeMain, zeile.LAENGENGRAD, zeile.BREITENGRAD)
+        	EXIT WHEN cursor_cities%notfound;
+		END LOOP;
+		close cursor_cities
+		*/
+		/*SELECT LAG(word) OVER ( ORDER BY ID ) AS PreviousWord ,
+       word ,
+       LEAD(word) OVER ( ORDER BY ID ) AS NextWord
+FROM   words;*/
+	
+		-- Rowcount and loop with row_number
+		--SELECT stadtname FROM STAEDTE;
+		--totalRows := SQL%Rowcount;
+		totalRows := 14;
+		LOOP
+			rowCounter := rowCounter + 1;
+			SELECT * INTO ZEILE FROM STAEDTE WHERE rownum = rowCounter;
+			--SELECT STADTNAME INTO rowName FROM STAEDTE WHERE rownum = rowCounter;
+			
+			EXIT WHEN totalRows = rowCounter;
+			distanceMap(zeile.stadtname) := CALCDISTANCE(latitudeMain ,longitudeMain, zeile.LAENGENGRAD, zeile.BREITENGRAD);
+		END LOOP;
+		
+		
 	 	RETURN distanceMap;
 	END;
 
