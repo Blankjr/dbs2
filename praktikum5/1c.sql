@@ -3,7 +3,7 @@ CREATE OR REPLACE PACKAGE DISTANCES AS
 	TYPE distancesMaps 
 		IS TABLE OF FLOAT INDEX BY STAEDTE.STADTNAME%TYPE;
 	
-	zeile STAEDTE%rowtype;
+
 	
   	-- Add a function
   	FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float;
@@ -15,22 +15,20 @@ CREATE OR REPLACE PACKAGE DISTANCES AS
 	
 END DISTANCES;
 /
---Create a new Package Body
+
 
 CREATE OR REPLACE PACKAGE BODY DISTANCES AS
 
-  -- Add procedure body
+
 	FUNCTION GETDISTANCERECORD (cityName IN STAEDTE.STADTNAME%"TYPE") RETURN distancesMaps
 		AS
 		latitudeMain STAEDTE.LAENGENGRAD%"TYPE";
 		longitudeMain STAEDTE.BREITENGRAD%"TYPE";
+        zeile STAEDTE%rowtype;
 		distanceMap distancesMaps;
 		totalRows NUMBER(3);
 		rowCounter NUMBER(3) := 0;
 		rowName STAEDTE.STADTNAME%"TYPE";
-		--cursor cursor_cities IS 
-		--SELECT * 
-		--FROM staedte;
     	
 	BEGIN
 	  	SELECT LAENGENGRAD INTO longitudeMain FROM STAEDTE WHERE STADTNAME = cityName;
@@ -79,6 +77,7 @@ CREATE OR REPLACE PACKAGE BODY DISTANCES AS
 
 		PROCEDURE CREATEDISTANCETABLE(ist IN NUMBER)
 			AS
+            zeile STAEDTE%rowtype;	
 			map1 distancesMaps;
 			BEGIN
 			--dbms_output.put_line(distances.calcdistance(1,1,1,1));
