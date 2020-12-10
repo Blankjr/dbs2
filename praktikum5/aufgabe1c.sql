@@ -24,8 +24,11 @@ CREATE OR REPLACE PACKAGE DISTANCES AS
   	-- Add a function
   	FUNCTION CALCDISTANCE(lat1 float, lon1 float, lat2 float, lon2 float) RETURN float;
 		
-  	-- Add a procedure
   	FUNCTION GETDISTANCERECORD (cityName IN STAEDTE.STADTNAME%"TYPE") RETURN distancesMaps;
+
+	PROCEDURE CREATEDISTANCETABLE(ist IN NUMBER);
+	
+	
 END DISTANCES;
 /
 --Create a new Package Body
@@ -106,9 +109,46 @@ FROM   words;*/
 				dist := dist * 180/PI;
 				dist := dist * 60 * 1.1515;
 				dist := dist * 1.609344;  -- for kilometers
+
 			END IF;
             RETURN dist;
 		END;
 
+		PROCEDURE CREATEDISTANCETABLE(ist IN NUMBER)
+			AS
+			map1 distancesMaps;
+			BEGIN
+			--dbms_output.put_line(distances.calcdistance(1,1,1,1));
+			--map1 := GETDISTANCERECORD('Aachen');
+			--INSERT INTO AbstaendeVonStaedten (von,Aa) VALUES ('Aachen',map1('Aachen')); -- FEHLER NO DATA FOUND
+			INSERT INTO AbstaendeVonStaedten (von,Aa) VALUES ('Aachen',1);
+			COMMIT;
+		END;
 END DISTANCES;
 /
+DECLARE
+	stadt float;
+BEGIN
+	DISTANCES.CREATEDISTANCETABLE(1);
+END;
+/*DROP TABLE abstaendeST;
+CREATE TABLE abstaendeST
+			(
+				von VARCHAR(10),
+				Aa FLOAT,
+				Bo FLOAT,
+				Du FLOAT,
+				Due FLOAT,
+				Es FLOAT,
+				Koe FLOAT,
+				Kr FLOAT,
+				distance08 FLOAT,
+				distance09 FLOAT,
+				distance10 FLOAT,
+				distance11 FLOAT,
+				distance12 FLOAT,
+				distance13 FLOAT,
+				distance14 FLOAT
+			);
+COMMIT;*/
+		
