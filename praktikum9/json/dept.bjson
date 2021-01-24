@@ -1,0 +1,24 @@
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f62"),
+        "deptno" : "10",
+        "name" : "ACCOUNTING",
+        "loc" : "NEW YORK"
+}
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f63"),
+        "deptno" : "20",
+        "name" : "RESEARCH",
+        "loc" : "DALLAS"
+}
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f64"),
+        "deptno" : "30",
+        "name" : "SALES",
+        "loc" : "CHICAGO"
+}
+{
+        "_id" : ObjectId("600ca4652987efb0963a4f65"),
+        "deptno" : "40",
+        "name" : "OPERATIONS",
+        "loc" : "BOSTON"
+}

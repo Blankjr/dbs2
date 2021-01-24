@@ -1,0 +1,143 @@
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f54"),
+        "empno" : "7369",
+        "ename" : "SMITH",
+        "job" : "CLERK",
+        "mgr" : "7902",
+        "hiredate" : "17-DEC-80",
+        "sal" : 800,
+        "dept" : "RESEARCH"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f55"),
+        "empno" : "7499",
+        "ename" : "ALLEN",
+        "job" : "SALESMAN",
+        "mgr" : "7698",
+        "hiredate" : "20-FEB-81",
+        "sal" : 1600,
+        "comm" : "300",
+        "dept" : "SALES"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f56"),
+        "empno" : "7521",
+        "ename" : "WARD",
+        "job" : "SALESMAN",
+        "mgr" : "7698",
+        "hiredate" : "22-FEB-81",
+        "sal" : 1250,
+        "comm" : "500",
+        "dept" : "SALES"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f57"),
+        "empno" : "7566",
+        "ename" : "JONES",
+        "job" : "MANAGER",
+        "mgr" : "7839",
+        "hiredate" : "02-APR-81",
+        "sal" : 2975,
+        "dept" : "RESEARCH"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f58"),
+        "empno" : "7654",
+        "ename" : "MARTIN",
+        "job" : "SALESMAN",
+        "mgr" : "7698",
+        "hiredate" : "28-SEP-81",
+        "sal" : 1250,
+        "comm" : "1400",
+        "dept" : "SALES"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f59"),
+        "empno" : "7698",
+        "ename" : "BLAKE",
+        "job" : "MANAGER",
+        "mgr" : "7839",
+        "hiredate" : "01-MAY-81",
+        "sal" : 2850,
+        "dept" : "SALES"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f5a"),
+        "empno" : "7782",
+        "ename" : "CLARK",
+        "job" : "MANAGER",
+        "mgr" : "7839",
+        "hiredate" : "09-JUN-81",
+        "sal" : 2450,
+        "dept" : "ACCOUNTING"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f5b"),
+        "empno" : "7788",
+        "ename" : "SCOTT",
+        "job" : "ANALYST",
+        "mgr" : "7566",
+        "hiredate" : "09-DEC-82",
+        "sal" : 3000,
+        "dept" : "RESEARCH"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f5c"),
+        "empno" : "7839",
+        "ename" : "KING",
+        "job" : "PRESIDENT",
+        "hiredate" : "17-NOV-81",
+        "sal" : 5000,
+        "dept" : "ACCOUNTING"
+}
+{
+        "_id" : ObjectId("600ca45e2987efb0963a4f5d"),
+        "empno" : "7844",
+        "ename" : "TURNER",
+        "job" : "SALESMAN",
+        "mgr" : "7698",
+        "hiredate" : "08-SEP-81",
+        "sal" : 1500,
+        "comm" : "0",
+        "dept" : "SALES"
+}
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f5e"),
+        "empno" : "7876",
+        "ename" : "ADAMS",
+        "job" : "CLERK",
+        "mgr" : "7788",
+        "hiredate" : "12-JAN-83",
+        "sal" : 1100,
+        "dept" : "RESEARCH"
+}
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f5f"),
+        "empno" : "7900",
+        "ename" : "JAMES",
+        "job" : "CLERK",
+        "mgr" : "7698",
+        "hiredate" : "03-DEC-81",
+        "sal" : 950,
+        "dept" : "SALES"
+}
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f60"),
+        "empno" : "7902",
+        "ename" : "FORD",
+        "job" : "ANALYST",
+        "mgr" : "7566",
+        "hiredate" : "03-DEC-81",
+        "sal" : 3000,
+        "dept" : "RESEARCH"
+}
+{
+        "_id" : ObjectId("600ca45f2987efb0963a4f61"),
+        "empno" : "7934",
+        "ename" : "MILLER",
+        "job" : "CLERK",
+        "mgr" : "7782",
+        "hiredate" : "23-JAN-82",
+        "sal" : 1300,
+        "dept" : "ACCOUNTING"
+}
