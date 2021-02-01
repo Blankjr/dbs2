@@ -1,0 +1,328 @@
+Autotrace aktiviert
+Zeigt den Ausführungsplan und die Statistiken der Anweisung an.
+SQL> SELECT * FROM employeesN WHERE first_name = 'Lorien';
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+     13134 25.06.55 Lorien         Chepyzhov        M 29.08.87
+     12898 05.03.59 Lorien         Pelc             F 16.04.91
+     13533 29.01.64 Lorien         Crouzet          F 08.07.89
+     15564 29.04.63 Lorien         DiGiano          F 06.05.95
+     14878 02.11.60 Lorien         Arlazarov        M 03.11.85
+     16691 13.07.61 Lorien         Isard            M 01.05.90
+     15857 06.02.60 Lorien         Kuhnemann        F 05.03.89
+     17220 09.07.55 Lorien         Panwar           F 14.11.88
+     19497 16.06.55 Lorien         Conde            M 24.11.89
+     20419 27.10.62 Lorien         Luck             M 21.07.90
+     21925 17.03.61 Lorien         Lambe            F 30.11.95
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+     22721 29.03.59 Lorien         Besselaar        M 27.02.85
+     27006 22.01.64 Lorien         Masand           M 19.01.91
+     26610 16.04.56 Lorien         Papsdorf         F 01.05.88
+     26110 08.10.54 Lorien         Veevers          M 07.09.85
+     28361 27.11.55 Lorien         Basagni          M 15.07.89
+     28923 14.04.57 Lorien         Lanteri          M 21.05.85
+     28607 20.01.63 Lorien         Buchter          F 04.07.93
+     49459 19.03.58 Lorien         Dalphin          M 10.08.87
+     50077 03.07.60 Lorien         Aseltine         M 22.03.91
+     40414 17.11.57 Lorien         Gopalakrishnan   M 10.05.94
+     48170 15.04.56 Lorien         Luon             M 23.12.99
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+     40885 21.03.60 Lorien         Pehl             M 15.08.87
+     42267 04.11.58 Lorien         Conte            M 17.01.95
+     41099 21.08.59 Lorien         Rosaz            M 25.01.90
+     43201 22.01.64 Lorien         Tsukuda          F 19.09.87
+     31318 12.03.55 Lorien         Bednarek         M 27.11.86
+     34853 24.11.54 Lorien         Levasseur        M 17.03.92
+     37567 28.02.55 Lorien         Gurbaxani        M 22.02.90
+     29937 20.10.63 Lorien         Verhaegen        M 08.02.85
+     32568 07.08.53 Lorien         Rijckaert        M 13.07.94
+     32865 17.08.59 Lorien         Frezza           M 30.06.88
+     35779 11.05.56 Lorien         Mandell          M 30.01.93
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+     36229 14.12.59 Lorien         Maliniak         F 21.11.86
+     70775 05.02.57 Lorien         Staudhammer      M 17.08.86
+     67582 23.04.58 Lorien         Siochi           M 03.02.94
+     61582 31.12.63 Lorien         Bauknecht        M 09.04.93
+     65708 23.10.62 Lorien         Cappelli         M 25.01.90
+     63611 04.05.53 Lorien         Lorcy            F 10.10.86
+     52529 05.07.52 Lorien         Erez             F 04.10.89
+     55348 25.07.59 Lorien         Jansch           F 12.01.90
+     53194 04.12.54 Lorien         Unno             M 25.04.87
+     53195 31.12.60 Lorien         Rosaz            F 13.11.87
+     59356 02.08.54 Lorien         Belinskaya       F 19.06.95
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+     56870 03.10.61 Lorien         Ouhyoung         M 28.05.87
+     52030 29.04.54 Lorien         Gronowski        M 06.12.92
+     91664 03.09.54 Lorien         Gyorkos          M 18.10.93
+     88234 18.02.64 Lorien         Tanemo           F 20.04.85
+     87397 26.04.60 Lorien         Perng            M 11.08.86
+     84927 07.05.58 Lorien         Harllee          M 07.04.93
+     91292 10.11.64 Lorien         Luca             M 16.01.92
+     83794 18.01.60 Lorien         Molenaar         F 18.02.87
+     79113 15.07.61 Lorien         Khamsi           F 21.03.94
+     73760 17.10.59 Lorien         Plumb            M 24.03.86
+     79261 31.12.56 Lorien         Cronau           M 30.08.89
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+     81916 21.11.52 Lorien         Yavatkar         F 17.02.90
+     79374 21.12.53 Lorien         Jarecki          M 21.11.85
+     74592 29.10.56 Lorien         Eiron            M 29.01.87
+     74891 01.11.57 Lorien         Kavvadias        M 26.09.86
+     80411 10.08.63 Lorien         Pollock          M 15.12.93
+    104981 27.08.56 Lorien         Dulin            M 28.05.85
+    203032 02.01.55 Lorien         Rassart          M 28.09.91
+    107566 13.05.58 Lorien         Hoppenstand      F 25.08.86
+    107738 20.04.59 Lorien         Jansch           M 15.03.87
+    108634 26.09.61 Lorien         Gihr             M 28.06.85
+    202273 10.12.60 Lorien         Borstler         M 12.09.90
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    104718 23.10.54 Lorien         Brandsma         M 11.05.85
+    102747 07.11.52 Lorien         Gecsei           F 27.10.94
+    100968 25.10.57 Lorien         Kuhnemann        M 22.01.93
+    101963 22.05.55 Lorien         Hofting          F 04.05.91
+    217410 30.06.60 Lorien         Terlouw          M 16.05.93
+    224747 23.12.62 Lorien         Benzmuller       F 14.11.96
+    218284 22.07.52 Lorien         Carrera          M 16.04.98
+    222187 22.05.57 Lorien         Cooman           F 04.02.87
+    216091 05.09.58 Lorien         Daescu           M 31.10.87
+    216372 17.11.61 Lorien         Navazio          F 04.08.88
+    223400 29.08.63 Lorien         Hartvigsen       M 07.08.87
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    210968 07.05.56 Lorien         Cmelik           M 29.08.89
+    211248 06.02.60 Lorien         Beetstra         F 06.10.90
+    211723 20.06.56 Lorien         Swab             M 28.01.93
+    209290 27.05.64 Lorien         Shanbhogue       M 06.04.91
+    212072 17.04.55 Lorien         Billingsley      F 25.02.88
+    212122 09.01.59 Lorien         Shiratori        M 14.02.90
+    207764 28.04.63 Lorien         Rehfuss          F 05.08.86
+    238696 03.11.53 Lorien         Gecseg           M 17.07.87
+    241177 23.02.64 Lorien         Kaelbling        M 18.04.86
+    239307 28.02.52 Lorien         Kohling          M 11.12.89
+    237810 05.08.64 Lorien         Bottner          M 21.07.90
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    244258 19.02.55 Lorien         Greibach         M 08.10.96
+    244382 28.09.59 Lorien         Baar             M 21.10.95
+    238248 01.06.64 Lorien         Begiun           M 07.03.93
+    231982 23.06.59 Lorien         Selvestrel       F 24.07.89
+    227001 07.08.56 Lorien         Takanami         M 03.10.90
+    229879 23.06.59 Lorien         Sabnani          M 19.06.88
+    230136 04.08.54 Lorien         Iisaka           M 08.05.88
+    225529 13.01.60 Lorien         Heystek          M 21.10.87
+    230736 25.03.60 Lorien         Lupu             M 01.10.87
+    231420 20.03.64 Lorien         Leslie           M 21.11.87
+    259919 01.03.53 Lorien         Vesel            M 23.06.95
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    262439 30.01.65 Lorien         Lagarias         F 10.10.85
+    266208 21.08.62 Lorien         Oehlmann         M 28.08.89
+    260057 28.03.64 Lorien         Cromarty         F 27.01.94
+    263971 18.08.59 Lorien         Schlenzig        M 16.10.91
+    266537 19.08.57 Lorien         Rahimi           M 29.09.95
+    266392 15.04.59 Lorien         Hardjono         M 19.11.85
+    264409 26.06.61 Lorien         Merro            M 25.01.89
+    258452 16.01.64 Lorien         Peot             M 01.03.90
+    261223 21.02.57 Lorien         Guenter          M 13.06.95
+    255736 25.03.62 Lorien         Norsworthy       M 22.08.90
+    255980 17.11.53 Lorien         Picel            F 09.12.90
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    256443 16.04.54 Lorien         Geffroy          F 04.03.85
+    250912 19.07.62 Lorien         Kulisch          M 21.08.90
+    256296 02.07.57 Lorien         Negoita          F 31.10.88
+    254791 08.02.55 Lorien         Pluym            F 08.04.91
+    252063 21.07.64 Lorien         Vieri            F 21.02.85
+    246879 10.02.61 Lorien         Ressouche        F 11.01.93
+    249755 11.12.55 Lorien         Noriega          M 30.04.90
+    255280 22.06.61 Lorien         Busillo          M 19.04.89
+    247429 18.01.55 Lorien         Shrader          M 01.06.96
+    281139 11.04.62 Lorien         Seghrouchni      F 16.02.93
+    283858 20.04.54 Lorien         Egerstedt        M 25.05.89
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    284932 03.12.59 Lorien         Dehkordi         F 28.04.89
+    283989 15.01.54 Lorien         Nollmann         F 08.05.94
+    282528 15.04.61 Lorien         Ranta            F 14.03.90
+    286191 05.01.56 Lorien         Shackel          M 03.05.93
+    280247 03.06.54 Lorien         Desikan          F 27.05.87
+    280293 30.01.61 Lorien         Ernst            F 16.02.93
+    282966 31.03.63 Lorien         Itzfeldt         M 12.11.90
+    278866 07.03.60 Lorien         Coombs           F 17.07.87
+    271479 10.12.58 Lorien         Schmiedel        M 25.01.88
+    271682 07.12.56 Lorien         Feldhoffer       M 17.09.85
+    274539 20.04.59 Lorien         Neiman           M 20.07.85
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    274545 30.04.62 Lorien         Roccetti         M 22.01.90
+    274769 07.03.55 Lorien         Etalle           F 14.10.89
+    269493 21.11.64 Lorien         Snyers           F 18.04.88
+    272305 10.04.54 Lorien         Oppitz           M 09.03.95
+    267281 28.11.56 Lorien         Yetto            M 10.08.86
+    267980 18.06.57 Lorien         Boreale          M 18.07.92
+    268263 16.01.59 Lorien         Madeira          F 16.07.91
+    400103 31.03.57 Lorien         Ruemmler         M 16.10.94
+    401662 14.01.54 Lorien         Schaar           F 29.05.93
+    407946 20.10.56 Lorien         Cools            F 07.11.93
+    408591 21.01.53 Lorien         Pouyioutas       M 05.10.87
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    408705 19.12.56 Lorien         Verspoor         M 12.10.96
+    406267 04.01.54 Lorien         Biron            F 09.06.93
+    406308 25.07.52 Lorien         Feldmann         M 23.09.93
+    406638 25.06.64 Lorien         Kalefeld         M 25.02.94
+    400451 30.07.64 Lorien         Khasidashvili    M 06.03.88
+    401086 31.01.54 Lorien         Linares          M 19.10.86
+    403785 26.10.53 Lorien         Androutsos       M 25.10.91
+    401276 18.07.52 Lorien         Greenaway        M 03.08.94
+    295187 08.05.64 Lorien         Reutenauer       M 02.10.85
+    297789 20.04.57 Lorien         Raczkowsky       F 01.04.89
+    292510 10.09.58 Lorien         Majewski         F 11.11.93
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    295420 06.05.61 Lorien         Kornatzky        F 17.06.94
+    298165 10.06.64 Lorien         Ranai            M 24.09.85
+    298668 21.05.52 Lorien         Bahr             M 24.12.88
+    295902 21.02.54 Lorien         Salverda         M 02.03.89
+    293246 27.07.63 Lorien         Macedo           M 20.08.92
+    288183 22.04.53 Lorien         Kavvadias        M 16.10.96
+    296354 30.09.53 Lorien         Cappelletti      M 28.03.88
+    296407 27.04.56 Lorien         Hambrick         M 16.11.91
+    291270 04.12.53 Lorien         Riefers          F 02.01.86
+    291296 30.09.52 Lorien         Ruemmler         M 25.02.98
+    291522 21.06.56 Lorien         Zirintsis        M 07.12.91
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    294199 22.01.58 Lorien         Demir            M 10.09.86
+    291550 16.10.61 Lorien         England          M 16.11.86
+    294825 02.08.57 Lorien         Litvinov         M 22.06.95
+    425930 23.02.56 Lorien         Theuretzbacher   F 01.03.90
+    429908 05.04.60 Lorien         Nyrup            M 14.09.91
+    422091 14.02.64 Lorien         Alameldin        M 27.09.86
+    418747 08.07.59 Lorien         Schneeberger     F 14.04.88
+    419538 17.08.64 Lorien         Syrzycki         M 11.06.96
+    411877 15.10.58 Lorien         Tzvieli          M 16.08.89
+    417769 24.02.57 Lorien         Grospietsch      F 30.05.93
+    417881 07.10.58 Lorien         Spelt            M 24.11.90
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    447435 07.12.53 Lorien         Chiodo           F 25.05.93
+    447436 11.04.56 Lorien         Sabnani          M 27.04.86
+    450080 28.10.59 Lorien         Takkinen         M 15.09.92
+    447655 23.03.52 Lorien         Bergere          F 14.10.92
+    447754 13.07.63 Lorien         Krone            F 25.07.92
+    444506 14.02.56 Lorien         Badr             M 27.12.86
+    442572 30.04.52 Lorien         Hellwagner       M 17.09.85
+    431893 08.04.54 Lorien         Braunmuhl        F 07.08.95
+    434790 10.11.52 Lorien         Baaz             M 07.02.88
+    438213 01.10.64 Lorien         Zultner          M 29.12.87
+    430389 07.01.62 Lorien         Danner           M 20.04.93
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    438502 28.07.64 Lorien         Jervis           M 31.05.90
+    430649 01.04.55 Lorien         Quittner         M 26.09.87
+    430945 04.03.61 Lorien         McFarlin         F 08.07.89
+    431249 07.12.57 Lorien         Baar             F 19.05.91
+    431284 06.08.55 Lorien         Liedekerke       M 16.03.92
+    439439 30.07.62 Lorien         Desikan          F 08.02.90
+    463224 30.06.55 Lorien         Erev             F 11.07.94
+    467314 19.07.57 Lorien         Miake            M 20.12.87
+    467527 12.06.61 Lorien         Swick            F 21.06.85
+    471291 28.04.57 Lorien         Gilg             F 08.05.87
+    468013 26.09.63 Lorien         Feinberg         M 23.01.86
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    469226 10.02.64 Lorien         Bugaenko         F 28.01.91
+    468330 07.10.55 Lorien         Kemmerer         F 25.09.95
+    465904 31.08.55 Lorien         Schmezko         M 21.04.88
+    463500 07.06.52 Lorien         Terkki           F 07.05.87
+    469749 21.02.57 Lorien         Merey            M 10.01.87
+    469935 22.08.57 Lorien         Reutenauer       F 17.12.91
+    464052 11.04.52 Lorien         Hutton           M 13.02.89
+    458042 03.06.58 Lorien         Neiman           M 30.06.94
+    460880 06.01.64 Lorien         Denna            M 18.08.87
+    453163 12.09.64 Lorien         Rosti            M 12.02.88
+    455707 03.12.58 Lorien         Heuser           M 27.08.94
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    451919 31.01.58 Lorien         Rusterholz       M 28.05.93
+    457381 22.01.60 Lorien         Haumacher        M 23.08.95
+    457719 18.05.57 Lorien         Miculan          M 01.03.90
+    452525 29.08.56 Lorien         Cardazo          M 21.02.90
+    486589 07.12.53 Lorien         Gerlach          M 26.09.90
+    489402 20.01.56 Lorien         Hainaut          M 27.09.88
+    490955 31.12.58 Lorien         Berendt          M 28.03.88
+    485040 04.07.56 Lorien         Bernick          M 07.06.93
+    485322 09.06.63 Lorien         Picaronny        F 23.04.89
+    473774 11.10.59 Lorien         Attimonelli      F 31.08.88
+    479355 03.02.59 Lorien         Cyre             M 22.07.88
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    482345 20.11.53 Lorien         Coney            M 02.02.87
+    474359 26.05.61 Lorien         Bruckman         M 26.03.88
+    474517 18.02.62 Lorien         Frolund          F 22.02.88
+    474873 23.05.62 Lorien         Ghandeharizadeh  M 29.03.87
+    478665 29.06.54 Lorien         Sooriamurthi     F 25.04.85
+    476270 21.05.62 Lorien         Kuzuoka          M 22.09.91
+    495526 30.06.61 Lorien         Brizzi           M 05.02.95
+    495543 07.07.52 Lorien         Cangellaris      F 24.02.87
+    498238 12.04.61 Lorien         Coorg            M 14.11.88
+    498427 26.08.64 Lorien         Schade           F 12.02.86
+    499006 12.12.52 Lorien         Spieker          F 28.11.91
+
+    EMP_NO BIRTH_DA FIRST_NAME     LAST_NAME        G HIRE_DAT
+---------- -------- -------------- ---------------- - --------
+    499890 13.01.53 Lorien         Hegner           M 27.06.87
+
+232 Zeilen ausgewählt. 
+
+Explain Plan
+-----------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                                                                                                                                                                                                                                                           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Plan hash value: 4025083974
+ 
+--------------------------------------------------------------------------------
+| Id  | Operation         | Name       | Rows  | Bytes | Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT  |            |   235 |  8930 |   513   (1)| 00:00:01 |
+|*  1 |  TABLE ACCESS FULL| EMPLOYEESN |   235 |  8930 |   513   (1)| 00:00:01 |
+--------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                                                                                                                                                                                                                                                           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+   1 - filter("FIRST_NAME"='Lorien')
+
+Ermitteln von Statistiken nicht möglich. Stellen Sie sicher, dass der Benutzer über angemessene Zugriffsberechtigung verfügt.
+Für die Verwendung der Statistikfunktionalität muss dem Benutzer Select-Zugriff für v_$sesstat, v_$statname und v_$session erteilt werden.
